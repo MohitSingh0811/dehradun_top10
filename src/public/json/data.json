@@ -1,0 +1,95 @@
+{
+    "categories": [
+      {
+        "category": "Hotels",
+        "items": [
+          {
+            "id": 1,
+            "name": "Hotel Pacific",
+            "image": "/dd.jpg",
+            "description": "Luxurious hotel in the heart of Dehradun with modern amenities and panoramic city views.",
+            "rating": 4.5,
+            "price_per_night": "INR 5000"
+          },
+          {
+            "id": 2,
+            "name": "Lemon Tree Hotel",
+            "image": "/images/lemon_tree.jpg",
+            "description": "Vibrant ambiance and a rooftop pool with proximity to major attractions.",
+            "rating": 4.3,
+            "price_per_night": "INR 4500"
+          }
+        ]
+      },
+      {
+        "category": "Colleges",
+        "items": [
+          {
+            "id": 1,
+            "name": "Doon University",
+            "image": "/images/doon_university.jpg",
+            "description": "A public university known for its multidisciplinary programs and serene campus.",
+            "rating": 4.6,
+            "type": "Public",
+            "courses_offered": ["BSc", "MSc", "PhD", "MBA"]
+          },
+          {
+            "id": 2,
+            "name": "Graphic Era University",
+            "image": "/images/graphic_era.jpg",
+            "description": "A prestigious private university offering engineering, management, and other courses.",
+            "rating": 4.5,
+            "type": "Private",
+            "courses_offered": ["BTech", "MTech", "BBA", "MBA"]
+          }
+        ]
+      },
+      {
+        "category": "Tourist Places",
+        "items": [
+          {
+            "id": 1,
+            "name": "Robber's Cave",
+            "image": "/images/robbers_cave.jpg",
+            "description": "A natural cave formation with a flowing stream, popular for trekking and picnics.",
+            "rating": 4.7,
+            "entry_fee": "INR 30",
+            "best_time_to_visit": "March to June"
+          },
+          {
+            "id": 2,
+            "name": "Sahastradhara",
+            "image": "/images/sahastradhara.jpg",
+            "description": "A serene waterfall known for its therapeutic sulfur springs, surrounded by lush greenery.",
+            "rating": 4.8,
+            "entry_fee": "Free",
+            "best_time_to_visit": "October to March"
+          }
+        ]
+      },
+      {
+        "category": "Restaurants",
+        "items": [
+          {
+            "id": 1,
+            "name": "Orchard Restaurant",
+            "image": "/images/orchard_restaurant.jpg",
+            "description": "A popular restaurant serving delicious Tibetan and Chinese cuisine with a scenic view.",
+            "rating": 4.5,
+            "cuisine": ["Tibetan", "Chinese"],
+            "price_range": "INR 500-1000"
+          },
+          {
+            "id": 2,
+            "name": "Kalsang Restaurant",
+            "image": "/images/kalsang_restaurant.jpg",
+            "description": "Known for its authentic Tibetan, Thai, and Chinese food, it's a must-visit for food lovers.",
+            "rating": 4.6,
+            "cuisine": ["Tibetan", "Thai", "Chinese"],
+            "price_range": "INR 400-800"
+          }
+        ]
+      }
+    ]
+  }
+  
