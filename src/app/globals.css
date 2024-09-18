@@ -25,3 +25,17 @@ body {
     text-wrap: balance;
   }
 }
+.dropdown {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.dropdown.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+}

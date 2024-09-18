@@ -1,44 +1,55 @@
 // components/Footer.js
-
+"use client"; // Ensure this file is treated as a client-side component
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Logos from '../../../public/images/logo.png';
+import Image from 'next/image'; // Import Next.js Image component
+import hotelsData from '../json/data.json'; // Adjust the path to your JSON data
 
 export default function Footer() {
+  const [categories, setCategories] = useState([]);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    // Initialize the data from JSON
+    setCategories(hotelsData.categories);
+  }, []);
+
   return (
-    <footer className="bg-white text-black py-8">
+    <footer className="bg-white text-black py-8 border-t border-gray-300">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
         {/* Column 1: Company Info */}
-        <div>
-          <h2 className="text-xl font-semibold">MyApp</h2>
+        <div className="flex-shrink-0 mb-4 md:mb-0">
+          <Link href="/">
+            <Image 
+              src={Logos} // Path to your logo image
+              alt="MyApp Logo"
+              width={150} // Adjust the width of your logo
+              height={100} // Adjust the height of your logo
+              className=""
+            />
+          </Link>
           <p className="mt-4 text-gray-600">
-            Empowering your business with innovative solutions.
+            Welcome to the Dehradun Top 10
           </p>
         </div>
-
         {/* Column 2: Quick Links */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-          <ul>
-            <li className="mb-2">
-              <Link href="/" className="text-gray-600 hover:text-black">
-                Home
-              </Link>
-            </li>
-            <li className="mb-2">
-              <Link href="/about" className="text-gray-600 hover:text-black">
-                About
-              </Link>
-            </li>
-            <li className="mb-2">
-              <Link href="/services" className="text-gray-600 hover:text-black">
-                Services
-              </Link>
-            </li>
-            <li className="mb-2">
-              <Link href="/contact" className="text-gray-600 hover:text-black">
-                Contact
-              </Link>
-            </li>
-          </ul>
+          {categories.map((category) => (
+            <div
+              key={category.category}
+              className="relative"
+            >
+              <ul>
+                <Link href={category.category}>
+                  <li className="mb-2">
+                    {category.category}
+                  </li>
+                </Link>
+              </ul>
+            </div>
+          ))}
         </div>
 
         {/* Column 3: Social Media */}
